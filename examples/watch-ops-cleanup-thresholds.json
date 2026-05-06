@@ -1,0 +1,17 @@
+{
+  "repo": "watch-ops-cleanup-deck",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 3,
+    "ship": 160,
+    "watch": 96
+  },
+  "terms": [
+    "dry-run spread",
+    "rename risk",
+    "operator cost",
+    "idempotence"
+  ]
+}
