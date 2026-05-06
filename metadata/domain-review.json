@@ -1,0 +1,73 @@
+{
+  "repo": "watch-ops-cleanup-deck",
+  "language": "JavaScript",
+  "category": "Automation",
+  "goal": "Develop a JavaScript command-oriented project for cleanup scenarios with node-edge fixtures, cycle and reachability reports, and local-only command execution.",
+  "review_model": {
+    "terms": [
+      "dry-run spread",
+      "rename risk",
+      "operator cost",
+      "idempotence"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "dry-run spread",
+      "signal": 44,
+      "slack": 26,
+      "drag": 32,
+      "confidence": 78,
+      "score": 96,
+      "lane": "hold"
+    },
+    {
+      "name": "stress",
+      "focus": "rename risk",
+      "signal": 74,
+      "slack": 26,
+      "drag": 25,
+      "confidence": 78,
+      "score": 177,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "operator cost",
+      "signal": 49,
+      "slack": 46,
+      "drag": 16,
+      "confidence": 78,
+      "score": 174,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "idempotence",
+      "signal": 69,
+      "slack": 54,
+      "drag": 32,
+      "confidence": 90,
+      "score": 186,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "dry-run spread",
+      "signal": 85,
+      "slack": 52,
+      "drag": 24,
+      "confidence": 93,
+      "score": 243,
+      "lane": "ship"
+    }
+  ]
+}
