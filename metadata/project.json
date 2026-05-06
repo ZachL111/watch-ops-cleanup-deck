@@ -1,0 +1,32 @@
+{
+  "index": 393,
+  "phase": 2,
+  "batch": 44,
+  "name": "watch-ops-cleanup-deck",
+  "planned_name": "watch-ops-cleanup-deck",
+  "language": "JavaScript",
+  "category": "Automation",
+  "goal": "Develop a JavaScript command-oriented project for cleanup scenarios with node-edge fixtures, cycle and reachability reports, and local-only command execution.",
+  "repository_url": "https://github.com/ZachL111/watch-ops-cleanup-deck",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 180,
+    "risk_penalty": 5,
+    "latency_penalty": 3,
+    "weight_bonus": 2,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
